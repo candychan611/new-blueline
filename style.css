@@ -1,0 +1,878 @@
+/*  
+Theme Name: New Blueline
+Description: New Blueline is a remake version of Blueline. It is a 3 column theme with one sidebar on the right and one to the left of the content area that uses a soft color scheme and very few images. Both sidebars are widget ready. The original Blueline was developed by www.gpsgazette.com and is discontinued now.
+Version: 1.6.0
+Author: Candy Chan
+Author email: candychan611@yahoo.com
+*/
+
+/*cross browser competability!!
+Don't use padding for parent containers if they have a fixed value on that side!!
+Use margin on child containers instead!!
+And remember that IE6 has a bug to double the size of margin and padding (left & right)
+for in-line elements adjacent to a floated div!!
+Use _ to get ride of it!!
+
+Also remember to provide a width when calling overflow: hidden, max is 98% (97% even better)
+for IE6 and all others.
+*/
+
+* {
+margin: 0px;
+padding: 0px;
+}
+
+ul {
+list-style: none;
+}
+
+img {
+border:none;
+}
+
+body {
+font-size: 15px;
+margin: 0px;
+text-align: center;
+background: #BFBDB3;
+color: #000;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 22px;
+}
+
+                         /***************************************************
+                         ***************** Headings (General) ****************
+                         *****************************************************/
+
+h1 {
+display: block;
+font-size: 36px;
+font-weight: bold;
+padding: 20px 0 0 15px;
+}
+
+h2 {
+display: block;
+font-size: 16px;
+font-weight: bold;
+padding: 5px 0 0 12px;
+margin: 5px 0 6px 0;
+text-align: left;
+}
+
+h3 {
+display: block;
+font-size: 14px;
+font-weight: bold;
+padding: 5px 0 0 12px;
+margin: 5px 0 6px 0;
+text-align: left;
+}
+
+h4 {
+margin-top: 15px;
+font-size: 13px;
+font-weight: bold;
+padding: 5px 0 0 12px;
+margin: 5px 0 6px 0;
+text-align: left;
+}
+
+h5 {
+margin-top: 15px;
+font-size: 12px;
+font-weight: bold;
+padding: 5px 0 0 12px;
+margin: 5px 0 6px 0;
+text-align: left;
+}
+
+                         /***************************************************
+                         ***************** Paragraph (General) **************
+                         *****************************************************/
+
+p {
+margin-bottom: 12px;
+margin-top: 12px;
+}
+
+                         /***************************************************
+                         ******************* Links (General) *****************
+                         *****************************************************/
+
+a:link {
+color: #798288;
+text-decoration: none;
+font-weight: bold;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+a:visited {
+color: #8C9EAA;
+text-decoration: none;
+font-weight: normal;
+}
+
+a:visited:hover {
+text-decoration: underline;
+}
+
+a img {
+border:none;
+background:none;
+}
+
+#feed, #feed img a:link, #feed img a:visited {
+border: none;
+}
+
+                         /***************************************************
+                         ***************** Blockquote (General) **************
+                         *****************************************************/
+
+blockquote {
+margin: 0px 0px 0px 30px;
+padding: 0px 25px 0px 0px;
+font-style: italic;
+color: #666666;
+border-left: 4px solid #B5C9DF;
+}
+
+                         /***************************************************
+                         ***************** Inputs (General) **************
+                         *****************************************************/
+
+.button {
+height: 20px;
+padding: 0 1px;
+border-width:1px;
+border-style: solid;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 1px;
+text-align: center;
+
+color: white;
+background-color: #798288;
+}
+
+.button:hover {
+color: #798288;
+background-color: #DFDAC3;
+}
+
+.searchtextbox {
+height: 18px;
+border: 1px solid;
+font-size: 14px;
+}
+
+                         /***************************************************
+                         *********************** Blogtitle ******************
+                         *****************************************************/
+
+#blogtitle {
+width: 97%;
+height:105px;
+display: block;
+color: #DFDAC3;
+text-align: left;
+margin: 10px auto 0 auto;
+background: #8C9EAA;
+}
+
+#blogtitle a:link {
+color: #DFDAC3;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+
+#blogtitle a:visited {
+color: #DFDAC3;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+
+#blogtitle a:hover {
+color: #DFDAC3;
+text-decoration: none;
+}
+
+#blogdescription {
+padding: 7px 0 0 17px;
+}
+
+                         /***************************************************
+                         ******************** Navigation Bar *****************
+                         *****************************************************/
+
+#navigation {
+margin-left: auto;
+margin-right: auto;
+width: 97%;
+
+/* show only 1 line of items despite how many are there */
+overflow: hidden;
+height: 2.7em;
+line-height: 2.7em;
+
+background-color: #798288;
+border-top: 1px solid #798288;
+}
+
+#navigation li {
+float: left;
+list-style-type: none;
+border-right: 1px solid;
+white-space: nowrap;
+
+border-color: #DFDAC3;
+}
+
+#navigation a {
+display: block;
+padding: 0 18px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: bold;
+text-decoration: none;
+
+color: white;
+}
+
+* html #navigation a {width:1%;} /* see http://www.positioniseverything.net/explorer/escape-floats.html */
+
+#navigation .selected,
+#navigation a:hover {background-color: #8C9EAA}
+
+#navigation form {
+float: right;
+height: 100%;
+width: 215px;
+margin-right: 14px;
+_margin-right: 7px;
+border-left: 1px solid;
+
+border-color: #DFDAC3;
+background: #798288 url(img/search.gif) bottom left no-repeat;
+}
+
+#navigation form fieldset {
+/* centering the search form could've
+been done way more elegant but IEWin
+and Opera refused to follow the rules */
+margin-top: 10px;
+border: 0 solid; /* Opera */
+}
+
+* html #navigation form fieldset {margin-top: 10px;}
+
+#navigation #s {
+float: right;
+width: 160px;
+margin: 0 5px 0 0;
+border-color: #ffffff;
+}
+
+#navigation #searchbutton {
+float: right;
+width: 35px;
+border-color: #DFDAC3;
+}
+
+                         /***************************************************
+                         *********************** Container *******************
+                         *****************************************************/
+
+#container {
+clear: left;
+padding: 0;
+margin-left: auto;
+margin-right: auto;
+margin-top: 0;
+width: 97%;
+border-top: 1px solid #DFDAC3;
+background: #DFDAC3;
+overflow: hidden; 
+}
+
+                         /****************************************************
+                         **************** Left Sidebar Container **************
+                         *****************************************************/
+
+#leftnav {
+float: left;
+width: 205px;
+margin: 5px 0px 20px 12px; /* work together with content margin */
+_margin: 5px 0px 20px 6px;
+text-align: left;
+overflow: hidden;
+}
+
+#leftnav p {
+margin: 4px 0 12px 0;
+}
+
+                         /****************************************************
+                         **************** Right Sidebar Container ************
+                         *****************************************************/
+
+#rightnav {
+float: right;
+width: 205px;
+margin: 5px 12px 20px 0px; /* work together with content margin */
+_margin: 5px 6px 20px 0px;
+text-align: left;
+overflow: hidden;
+}
+
+#rightnav p {
+margin: 4px 0 12px 0;
+}
+
+                         /***************************************************
+                         *********************** Left Sidebar ***************
+                         *****************************************************/
+
+#sidebarleft {
+font-size: 13px;
+background: none;
+line-height: 17px;
+}
+
+#sidebarleft li { /* frame for each list section */
+background: #798288 url(img/li.gif) bottom right no-repeat;
+padding-bottom: 8px;
+margin-bottom: 8px;
+}
+
+#sidebarleft ul li {
+display: block;
+margin: 0 10px 0 8px;
+background: url(img/star.gif) no-repeat;
+padding-left: 10px;
+padding-bottom: 0px; /* cancel the affect of padding-bottom: 8px; */
+}
+
+#sidebarleft ul li ul li {
+margin-left: 5px;
+background: url(img/child.gif) no-repeat;
+padding-left: 10px;
+padding-bottom: 0px; /* cancel the affect of padding-bottom: 8px; */
+}
+
+#sidebarleft a:link {
+color: #DFDAC3;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+
+#sidebarleft a:hover {
+color: #DFDAC3;
+text-decoration: underline;
+border: none;
+}
+
+#sidebarleft a:visited:hover {
+color: #DFDAC3;
+text-decoration: underline;
+border: none;
+}
+
+#sidebarleft a:visited {
+color: #DFDAC3;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+
+#sidebarleft .widgettitle {
+font-size: 16px;
+font-weight: bold;
+color: #000;
+padding: 3px 8px 1px 7px;
+background:#8C9EAA url(img/h2.gif) top left no-repeat;
+}
+
+                         /***************************************************
+                         *********************** Right Sidebar **************
+                         *****************************************************/
+
+#sidebarright {
+font-size: 13px;
+background: none;
+line-height: 17px;
+}
+
+#sidebarright li { /* frame for each list section */
+background: #798288 url(img/li.gif) bottom right no-repeat;
+padding-bottom: 10px;
+margin-bottom: 8px;
+}
+
+#sidebarright ul li {
+display: block;
+margin: 0 10px 0 8px;
+background: url(img/star.gif) no-repeat;
+padding-left: 10px;
+padding-bottom: 0px; /* cancel the affect of padding-bottom: 8px; */
+}
+
+#sidebarright ul li ul li {
+margin-left: 5px;
+background: url(img/child.gif) no-repeat;
+padding-left: 10px;
+padding-bottom: 0px; /* cancel the affect of padding-bottom: 8px; */
+}
+
+#sidebarright a:link {
+color: #DFDAC3;
+text-decoration: none;
+font-weight: bold;
+border: none;
+}
+
+#sidebarright a:hover {
+color: #DFDAC3;
+text-decoration: underline;
+border: none;
+}
+
+#sidebarright a:visited:hover {
+color: #DFDAC3;
+text-decoration: underline;
+border: none;
+}
+
+#sidebarright a:visited {
+color: #DFDAC3;
+font-weight: bold;
+text-decoration: none;
+border: none;
+}
+
+#sidebarright .widgettitle {
+font-size: 16px;
+font-weight: bold;
+color: #000;
+padding: 3px 8px 1px 7px;
+background:#8C9EAA url(img/h2.gif) top left no-repeat;
+}
+
+                         /***************************************************
+                         ******************* Content Area ********************
+                         *****************************************************/
+
+#content {
+display: block;
+margin: 5px 230px 20px 230px;
+padding: 25px 20px 30px 12px;
+text-align: left;
+background: #fff;
+/* don't use overflow: hidden here as width cannot be specified.
+   Otherwise, e.g. the post div will collapse in Chrome. */
+}
+
+/* for both post and non-post content */
+#content ul {
+padding-left: 15px;
+}
+
+#content ul ul {
+padding-left: 5px;
+}
+
+#content ul li {
+padding-left: 15px;
+background: url(img/content-star.gif) no-repeat;
+}
+
+#content ul li ul li {
+padding-left: 15px;
+background: url(img/content-child.gif) no-repeat;
+}
+
+#content ol {
+list-style-position: inside;
+padding-left: 15px;
+padding-top: 2px;
+margin-bottom: 10px;
+}
+
+#content p {
+padding-left: 10px;
+}
+
+.pagetitle {
+font-size: 16px;
+font-weight: bold;
+padding: 0;
+}
+
+.postnavigation { /* a page can have more that 1 postnavigation */
+display: block;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 0;
+}
+
+.alignright {
+text-align: right;
+}
+
+.alignleft {
+text-align: left
+}
+
+                         /***************************************************
+                         ********************** Posts ***********************
+                         *****************************************************/
+
+.post {
+display: block;
+overflow: hidden;
+width:97%;
+}
+
+.date {
+font-size: 12px;
+font-weight: bold;
+float: right;
+margin-top: -28px;
+margin-right: 6px;
+_margin-right: 3px;
+color: #BFBFBF;
+}
+
+.entry {
+margin-bottom: 15px;
+}
+
+                     /*Table*/
+.entry table {
+border-spacing: 0;
+border-collapse: collapse;
+}
+
+.entry table, .entry th, .entry td {
+border: 1px solid black;
+}
+
+.entry td {
+padding: 5px 0px 5px 6px;
+}
+
+                     /*Code*/
+code {
+display: block;
+margin: 10px 30px 0 30px;
+padding: 2px 10px 5px 10px;
+border-top: 4px solid #798288;
+color: #666666;
+background: #DFDAC3;
+}
+
+.posttitle {
+font-size: 22px;
+font-weight: bold;
+padding: 5px 80px 2px 5px;
+
+border-bottom: 3px solid #BFBDB3;
+background:#EFECE0 url(img/title.gif) top left no-repeat;
+}
+
+.posttitle:hover {
+border-bottom: 3px solid #798288;
+}
+
+.posttitle a:link {
+font-size: 22px;
+color: #798288;
+font-weight: bold;
+}
+
+.posttitle a:visited {
+font-size: 22px;
+color: #798288;
+font-weight: bold;
+}
+
+.posttitle a:hover {
+font-size: 22px;
+color: #798288;
+font-weight: bold;
+text-decoration: none;
+}
+
+.posttitle a:visited:hover {
+text-decoration: none;
+}
+
+#postwidgetabovetitle .widgettitle {
+
+}
+
+#postwidgetbelowtitle .widgettitle {
+
+}
+
+#postwidgetbelowcontent .widgettitle {
+
+}
+
+                         /***************************************************
+                         *********************** Post Metadata ****************
+                         *****************************************************/
+
+.postmetadata {
+display:block;
+margin: 0 35px 25px 20px;
+border-left: 4px solid #BFBDB3;
+padding: 5px 10px 10px 5px;
+font-size: 12px;
+line-height: 18px;
+text-align: left;
+background: #EFECE0;
+color:#3F3F3F;
+}
+
+.postmetadata a:link {
+border: none;
+color: #8C9EAA;
+font-weight: normal;
+}
+
+.postmetadata a:hover {
+border: none;
+color: #8C9EAA;
+font-weight: normal;
+text-decoration: none;
+}
+
+.postmetadata a:visited:hover {
+border: none;
+color: #8C9EAA;
+font-weight: normal;
+}
+
+.postmetadata a:visited {
+border: none;
+color: #8C9EAA;
+font-weight: normal;
+}
+
+                         /***************************************************
+                         *********************** Comments ********************
+                         *****************************************************/
+
+.commentlist {
+padding-left: 40px;
+padding-right: 15px;
+background: #fff;
+color: #000;
+}
+
+.commentlist li {
+margin: 8px 10px 8px 15px;
+padding-left: 12px;
+list-style: none;
+background: #DFDAC3;
+margin-bottom: 2px;
+border: 1px solid #8C9EAA;
+}
+
+li.alt {
+background: #fff;
+border: 1px solid #8C9EAA;
+}
+
+.commentlist cite {
+padding: 2px 3px 1px 3px;
+}
+
+.commentlist p {
+padding: 5px 5px 2px 3px;
+margin-bottom: 5px;
+}
+
+.commentlist a:link {
+border: none;
+text-decoration: underline;
+font-weight: bold;
+color: #8C9EAA;
+}
+
+.commentlist a:visited {
+border: none;
+text-decoration: underline;
+font-weight: bold;
+color: #8C9EAA;
+}
+
+.commentlist a:hover {
+border: none;
+text-decoration: underline;
+font-weight: bold;
+color: #8C9EAA;
+}
+
+.commentlist a:visited:hover {
+border: none;
+text-decoration: underline;
+font-weight: bold;
+color: #8C9EAA;
+}
+
+.commentmetadata a:link, .commentmetadata a:hover, .commentmetadata a:visited {
+text-decoration: none;
+color: #8C9EAA;
+}
+
+.commentnumber {
+font: italic normal 14px 'Times New Roman', Times, serif;
+margin-top: 2px;
+float:right;
+color: #8C9EAA;
+font-size: 36px;
+}
+
+#comment {
+width:80%;
+}
+
+                         /***************************************************
+                         ***************** New Comment Form *****************
+                         *****************************************************/
+
+.commentformtext {
+font-size: 12px;
+}
+
+.commentformshortinput {
+width: 160px;
+}
+
+.commentformcommentinput {
+width: 300px;
+height: 210px;
+}
+
+                         /***************************************************
+                         ******************** Search Form *******************
+                         *****************************************************/
+
+#searchform #searchbutton {
+width: 35px;
+border-color: #798288;
+vertical-align:middle;
+}
+
+#searchform #s {
+width: 160px;
+border-color: #798288;
+vertical-align:middle;
+}
+
+                         /***************************************************
+                         ******************** WP Calendar *******************
+                         *****************************************************/
+
+#wp-calendar {
+empty-cells: show;
+margin: 10px auto 0;
+width: 160px;
+}
+
+#wp-calendar #next a {
+padding-right: 10px;
+text-align: right;
+}
+
+#wp-calendar #prev a {
+padding-left: 10px;
+text-align: left;
+}
+
+#wp-calendar td {
+padding: 2px 0;
+text-align: center;
+}
+
+#wp-calendar th {
+/*padding: 3px 0;*/
+text-align: center;
+}
+
+#wp-calendar caption {
+text-align: center;
+width: 100%;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+                         /***************************************************
+                         ***************** Other WP Specific *****************
+                         *****************************************************/
+
+.wp-smiley {
+padding: 0;
+}
+
+                         /***************************************************
+                         *********************** Footer *********************
+                         *****************************************************/
+
+#footwrap {
+clear:both;
+background: none;
+color: #8F8F8F;
+border-top: 5px solid #798288;
+line-height: 3.7em; /* at least 3.6 for font size 15px so that it can cover the 35px image at margin-top: -34px; */
+}
+
+#footwrap p {
+margin: 0;
+
+/* so the effect won't be affected by the credit imgs */
+display: block;
+text-align:center;
+}
+
+#footwrap a:link {
+color: #8F8F8F;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+#footwrap a:hover {
+color: #8F8F8F;
+text-decoration: underline;
+border: none;
+}
+
+#footwrap a:visited:hover {
+color: #8F8F8F;
+text-decoration: underline;
+border: none;
+}
+
+#footwrap a:visited {
+color: #8F8F8F;
+text-decoration: none;
+border: none;
+font-weight: bold;
+}
+
+#footwrap .credits {
+float: right;
+margin-right: 5px;
+margin-top: -34px; /* max is image size-1, use top for further adjust */
+position: relative;
+top: -10px;
+}
