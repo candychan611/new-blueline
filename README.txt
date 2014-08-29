@@ -8,4 +8,4 @@ Both sidebars are widget ready.
 
 The original Blueline is discontinued for a very long time and cannot be found from the official WP theme repository already.
 
-It is released under a GPL licence, however I would appreciate it if you leave the footer credits.
+It is released under a GPL v2 licence, however I would appreciate it if you leave the footer credits.
